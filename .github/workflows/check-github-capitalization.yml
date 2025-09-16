@@ -1,0 +1,21 @@
+name: Check GitHub Capitalization
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    name: Check for GitHub miscapitalization
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run capitalization fixer
+        run: .github/scripts/fix_github_caps.py
