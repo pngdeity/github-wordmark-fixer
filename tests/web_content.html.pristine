@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+</head>
+<body>
+    <!-- This is a hidden comment about Github. -->
+    <div style="display:none;">
+        This is a hidden div with the word Github.
+    </div>
+    <p>
+        Visible content about github.
+    </p>
+</body>
+</html>

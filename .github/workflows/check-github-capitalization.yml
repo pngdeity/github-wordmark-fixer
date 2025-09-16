@@ -19,7 +19,6 @@ jobs:
 
       - name: Run capitalization fixer
         run: .github/scripts/fix_github_caps.py
-
       - name: Commit capitalization changes
         run: |
           git config --global user.name "github-actions[bot]"
