@@ -1,0 +1,8 @@
+# A script related to github
+my_github_variable = "some_value"
+
+def get_github_data():
+  # TODO: get data from github api
+  pass
+
+print(my_github_variable)
