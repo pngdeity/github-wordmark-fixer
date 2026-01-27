@@ -1,0 +1,39 @@
+name: 'GitHub Workmark Fixer'
+description: 'Fixer for GitHub Workmark'
+author: 'pngdeity'
+
+inputs:
+  path:
+    description: 'Path to the directory containing source code files to audit'
+    required: true
+    default: '.'
+  file_patterns:
+    description: 'Comma-separated list of file patterns to include (e.g., "*.py,*.js,*.ts")'
+    required: false
+    default: '*.py,*.js,*.ts,*.java,*.cpp,*.h'
+  min_comment_length:
+    description: 'Minimum length for comments to be considered meaningful'
+    required: false
+    default: '10'
+
+outputs:
+  issues_found:
+    description: 'Number of issues found in the code prose'
+  report_path:
+    description: 'Path to the generated audit report'
+
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    - name: Install dependencies
+      shell: bash
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run prose audit
+      shell: bash
+      run: python src/audit_prose.py 
