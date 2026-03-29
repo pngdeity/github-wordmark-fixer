@@ -1,0 +1,7 @@
+TODO
+Documentation from the vendor on custom actions
+https://docs.github.com/en/actions/sharing-automations/creating-actions/about-custom-actions
+The vendor's official organization on their platform
+github.com/actions
+The organization contains the /toolkit and /typescript-action repositories, among other useful items.
+https://github.com/actions/hello-world-javascript-action
