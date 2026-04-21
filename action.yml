@@ -1,0 +1,21 @@
+name: 'GitHub Wordmark Fixer'
+description: 'Enforces the correct capitalization of the GitHub wordmark in prose.'
+author: 'pngdeity'
+
+inputs:
+  github-token:
+    description: 'The GitHub token used to create review comments'
+    required: true
+    default: ${{ github.token }}
+  threshold:
+    description: 'The maximum allowed distance for a correction (e.g., 0.5)'
+    required: false
+    default: '0.5'
+  use-ml:
+    description: 'Whether to use local ML inference (CodeBERT) for intent classification'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'node20'
+  main: 'dist/action.js'

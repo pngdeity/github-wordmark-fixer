@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'github-wordmark-fixer'
+    static_configs:
+      - targets: ['triager:9464', 'worker:9464', 'patcher:9464']
