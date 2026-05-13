@@ -4,5 +4,14 @@ coverage/
 .env
 .DS_Store
 *.log
-.gemini/
 docs/
+apm_modules/
+.agents/
+.gemini/
+.opencode/
+.github/instructions/
+.github/prompts/
+.github/agents/
+.github/hooks/
+AGENTS.md
+GEMINI.md
